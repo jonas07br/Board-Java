@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 public enum ColumnType {
     TODO,
     DOING,
-    CLOSED,
+    FINISHED,
     CANCELLED;
     public static ColumnType getByName(final String name){
 
