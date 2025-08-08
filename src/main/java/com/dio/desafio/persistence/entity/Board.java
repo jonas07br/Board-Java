@@ -23,4 +23,12 @@ public class Board {
                 column -> column.getType().equals(type)
         ).findFirst().orElse(null);
     }
+
+    public Column getCanceledColumn() {
+        return columns.stream().filter(column -> column.getType().equals(ColumnType.CANCELLED)).findFirst().orElse(null);
+    }
+
+    public Column getToDoColumn() {
+        return columns.stream().filter(column -> column.getType().equals(ColumnType.TODO)).findFirst().orElse(null);
+    }
 }
