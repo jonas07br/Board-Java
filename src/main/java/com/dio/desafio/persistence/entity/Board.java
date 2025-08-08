@@ -11,7 +11,7 @@ import java.util.List;
 
 @Data
 public class Board {
-    private int id;
+    private Long id;
     private String title;
 
     @ToString.Exclude
