@@ -66,13 +66,13 @@ public class CardDAO {
                        c.board_column_id,
                        bc.name,
                        (SELECT COUNT(sub_b.id)
-                               FROM BLOCKS sub_b
+                               FROM blocks sub_b
                               WHERE sub_b.card_id = c.id) blocks_amount
-                  FROM CARDS c
-                  LEFT JOIN BLOCKS b
+                  FROM cards c
+                  LEFT JOIN blocks b
                     ON c.id = b.card_id
                    AND b.unblocked_at IS NULL
-                 INNER JOIN BOARDS_COLUMNS bc
+                 INNER JOIN boards_columns bc
                     ON bc.id = c.board_column_id
                   WHERE c.id = ?;
                 """;
