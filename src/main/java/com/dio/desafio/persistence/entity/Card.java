@@ -8,5 +8,5 @@ public class Card {
     private int id;
     private String title;
     private String description;
-    private Column column;
+    private Column column = new Column();
 }
