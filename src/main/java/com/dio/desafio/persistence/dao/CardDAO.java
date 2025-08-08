@@ -3,7 +3,6 @@ package com.dio.desafio.persistence.dao;
 import com.dio.desafio.dto.CardDTO;
 import com.dio.desafio.persistence.entity.Card;
 import lombok.AllArgsConstructor;
-import org.postgresql.jdbc.PgStatement;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,10 +13,10 @@ import static com.dio.desafio.converter.OffsetDateTimeConverter.toOffsetDateTime
 import static java.util.Objects.nonNull;
 
 @AllArgsConstructor
-public class CardsDAO {
+public class CardDAO {
     private Connection connection;
 
-    public Card insertCard(final Card card) throws SQLException{
+    public Card insert(final Card card) throws SQLException{
         var sqlString = "INSERT INTO cards (title,description,board_column_id) VALUES (?,?,?)";
         try(var statement = connection.prepareStatement(sqlString, Statement.RETURN_GENERATED_KEYS)) {
             var index = 1;
