@@ -3,6 +3,7 @@ package com.dio.desafio.persistence.dao;
 import com.dio.desafio.dto.ColumnDTO;
 import com.dio.desafio.persistence.entity.Card;
 import com.dio.desafio.persistence.entity.Column;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import java.sql.Connection;
@@ -15,7 +16,7 @@ import java.util.Optional;
 import static com.dio.desafio.persistence.Enums.ColumnType.getByName;
 import static java.util.Objects.isNull;
 
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class ColumnDAO {
     private Connection connection;
 
