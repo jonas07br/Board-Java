@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class Card {
-    private int id;
+    private Long id;
     private String title;
     private String description;
     private Column column = new Column();
